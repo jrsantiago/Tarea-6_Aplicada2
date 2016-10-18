@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Inicio.master.cs" Inherits="VentanaGzWeb.Inicio" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ventana-Gz</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+     <link rel="stylesheet" href="css/bootstrap.min.css" >
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: xx-large;
+        }
+        .auto-style2 {
+            color: #0000CC;
+            background-color: #FFFFFF;
+        }
+        .auto-style3 {
+            background-color: #FFFFFF;
+        }
+        .auto-style4 {
+            color: #0000CC;
+        }
+        .auto-style13 {
+            color: #3333FF;
+        }
+        </style>
+</head>
+<body style="height: 107px">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <p>
+                <span class="auto-style1"><strong><em><span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="auto-style2">&nbsp;</span></em></strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table style="width:100%;">
+                    <tr>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style1"><strong><em><span class="auto-style3"><asp:Label  ID="Label1" runat="server" Text=" Ventana Gz" CssClass="auto-style13"></asp:Label>
+                            </span></em></strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style4"><span class="auto-style3"><em><asp:Button ID="ConsultarButton" runat="server" OnClick="ConsultarButton_Click" Text="Consultar" Width="121px" />
+&nbsp;&nbsp;&nbsp;&nbsp; </em></span></span>
+                            <asp:Button ID="RegistroUsuarioButton" runat="server" OnClick="RegistroUsuarioButton_Click" Text="Registro Usuario" Width="138px" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    </table>
+                </p>
+                
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
