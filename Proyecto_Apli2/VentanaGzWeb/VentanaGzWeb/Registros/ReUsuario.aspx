@@ -73,7 +73,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <table style="width:100%;">
+    <table class="nav-justified">
         <tr>
             <td class="auto-style1"></td>
             <td class="auto-style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -118,11 +118,12 @@
             <td class="auto-style20">
                 <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="UploadButton" runat="server" OnClick="UploadButton_Click" Text="Upload" ViewStateMode="Enabled" />
-                <asp:FileUpload ID="FileUpload1" runat="server" />
                 <br />
 &nbsp;
                 <asp:Label ID="LblMesanje" runat="server" Text="Labelmensaje"></asp:Label>
+            &nbsp;&nbsp;
+                <asp:Button ID="UploadButton" runat="server" OnClick="UploadButton_Click" Text="Upload" ViewStateMode="Enabled" Height="26px" Width="64px" />
+                <asp:FileUpload ID="FileUpload1" runat="server" />
             </td>
             <td class="auto-style21"></td>
         </tr>

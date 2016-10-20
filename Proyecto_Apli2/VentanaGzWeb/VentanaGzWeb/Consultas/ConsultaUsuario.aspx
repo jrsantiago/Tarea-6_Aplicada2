@@ -116,11 +116,11 @@
                                     <table style="border:1px solid #A55129;background-color:#FFF7E7">
                                         <tr>
                                             <td style="width: 200px">
-                                                
+                                            <asp:Image ID="imgEmployee" ImageUrl='<%# Eval("imagen")%>' runat="server" />
 
                                             </td>
                                             <td style="width: 200px">
-                                                aqui
+                                                ......
                                                 <table>
                                                    <tr>
                                                        <td>
@@ -148,7 +148,7 @@
                                                     </tr>
                                                 </table>
 
-                                                aqui
+                                               .......
                                             </td>
                                         </tr>
 
