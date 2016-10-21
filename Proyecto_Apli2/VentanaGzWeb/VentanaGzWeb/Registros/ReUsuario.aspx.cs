@@ -53,7 +53,11 @@ namespace VentanaGzWeb.Registros
             {
                 usu.Restriccion = 0;
             }
+            string str = FileUpload1.FileName;
+            FileUpload1.PostedFile.SaveAs(Server.MapPath("//Imagenes//") + str);
+            string path = "~//Imagenes//" + str.ToString();
 
+            usu.Imagenes = path;
             usu.UserName = UserNameTextBox.Text;
             usu.Contrasena = ContrasenaTextBox.Text;
             usu.Nombre = NombreTextBox.Text;
@@ -71,21 +75,21 @@ namespace VentanaGzWeb.Registros
         }
         public void subirFoto()
         {
-            if (FileUpload1.HasFile)
-            {
-                string str = FileUpload1.FileName;
-                FileUpload1.PostedFile.SaveAs(Server.MapPath("//Imagenes//") + str);
-                string path = "~//Imagenes//" + str.ToString();
-                cone.Ejecutar(String.Format("Insert into Usuario(imagen) Values('{0}')", path));
+            //if (FileUpload1.HasFile)
+            //{
+            //    string str = FileUpload1.FileName;
+            //    FileUpload1.PostedFile.SaveAs(Server.MapPath("//Imagenes//") + str);
+            //    string path = "~//Imagenes//" + str.ToString();
+            //    cone.Ejecutar(String.Format("Insert into Usuario(imagen) Values('{0}')", path));
 
-                LblMesanje.Text = "Imagen Subida";
+            //    LblMesanje.Text = "Imagen Subida";
 
 
-            }
-            else
-            {
-                LblMesanje.Text = "Porfavor suba una imagen";
-            }
+            //}
+            //else
+            //{
+            //    LblMesanje.Text = "Porfavor suba una imagen";
+            //}
         }
 
         protected void BuscarButton_Click(object sender, EventArgs e)

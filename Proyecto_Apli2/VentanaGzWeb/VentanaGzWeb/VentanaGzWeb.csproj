@@ -80,6 +80,7 @@
     <Content Include="js\jquery-3.1.1.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="log.aspx" />
+    <Content Include="Registros\ReMateriales.aspx" />
     <Content Include="Registros\ReUsuario.aspx" />
     <Content Include="packages.config" />
     <Content Include="Web.config" />
@@ -104,6 +105,13 @@
     <Compile Include="Inicio.Master.designer.cs">
       <DependentUpon>Inicio.Master</DependentUpon>
     </Compile>
+    <Compile Include="InicioGz.Master.cs">
+      <DependentUpon>InicioGz.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioGz.Master.designer.cs">
+      <DependentUpon>InicioGz.Master</DependentUpon>
+    </Compile>
     <Compile Include="log.aspx.cs">
       <DependentUpon>log.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -116,6 +124,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\ReMateriales.aspx.cs">
+      <DependentUpon>ReMateriales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\ReMateriales.aspx.designer.cs">
+      <DependentUpon>ReMateriales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\ReUsuario.aspx.cs">
       <DependentUpon>ReUsuario.aspx</DependentUpon>
@@ -146,6 +161,7 @@
     <Content Include="DbVentanaGzWebDataSet.xss">
       <DependentUpon>DbVentanaGzWebDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="InicioGz.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

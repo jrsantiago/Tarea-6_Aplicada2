@@ -27,11 +27,16 @@ namespace VentanaGzWeb.Consultas
         //    Repeater1.DataBind();
 
         }
-
-        private DataSet GetData()
+        public int convertirId()
         {
             int id = 0;
             int.TryParse(IdTextBox.Text, out id);
+            return id;
+        }
+
+        private DataSet GetData()
+        {
+            int id = convertirId();
             string Cs = ConfigurationManager.ConnectionStrings["VentanaDb"].ConnectionString;
             using (SqlConnection con = new SqlConnection(Cs))
             {
@@ -47,8 +52,7 @@ namespace VentanaGzWeb.Consultas
 
             DbVentana cone = new DbVentana();
 
-            int id = 0;
-            int.TryParse(IdTextBox.Text, out id);
+            int id = convertirId();
             if(string.IsNullOrWhiteSpace(IdTextBox.Text))
             {
                 Response.Write("<script>alert('Introdusca Id')</script>");
@@ -61,8 +65,6 @@ namespace VentanaGzWeb.Consultas
                 Repeater1.DataSource = ds;
                 Repeater1.DataBind();
 
-                UsuarioGridView.DataSource = usu.Listado("*","IdUsuario="+IdTextBox.Text, " ");
-            UsuarioGridView.DataBind();
             }
        
            
@@ -71,21 +73,32 @@ namespace VentanaGzWeb.Consultas
 
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
+            int id = convertirId();
             Usuario usu = new Usuario();
-  
-            UsuarioReportViewer.Reset();
-
-
-            UsuarioReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
-            UsuarioReportViewer.LocalReport.ReportPath = @"Reportes\ReportUsuario1.rdlc";
 
             UsuarioReportViewer.LocalReport.DataSources.Clear();
-            UsuarioReportViewer.LocalReport.DataSources.Add(
+            UsuarioReportViewer.ProcessingMode = ProcessingMode.Local;
 
-                new ReportDataSource("Usuario",
-               usu.listar)
-                );
+            UsuarioReportViewer.LocalReport.ReportPath = @"Reportes\ReportUsuario1.rdlc";
+
+            ReportDataSource source = new ReportDataSource("Usuario", usu.Listado("*","IdUsuario="+IdTextBox.Text, " "));
+
+            UsuarioReportViewer.LocalReport.DataSources.Add(source);
             UsuarioReportViewer.LocalReport.Refresh();
+  
+            //UsuarioReportViewer.Reset();
+
+
+            //UsuarioReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
+            //UsuarioReportViewer.LocalReport.ReportPath = @"Reportes\ReportUsuario1.rdlc";
+
+            //UsuarioReportViewer.LocalReport.DataSources.Clear();
+            //UsuarioReportViewer.LocalReport.DataSources.Add(
+
+            //    new ReportDataSource("Usuario",
+            //   usu.listar)
+            //    );
+            //UsuarioReportViewer.LocalReport.Refresh();
 
         }
     }

@@ -7,72 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VentanaGzWeb.Consultas {
+namespace VentanaGzWeb.Registros {
     
     
-    public partial class ConsultaUsuario {
+    public partial class ReMateriales {
         
         /// <summary>
-        /// Label1 control.
+        /// BuscarTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox BuscarTextBox;
         
         /// <summary>
-        /// IdTextBox control.
+        /// DetalleTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdTextBox;
+        protected global::System.Web.UI.WebControls.TextBox DetalleTextBox;
         
         /// <summary>
-        /// BuscarButton control.
+        /// UnidadTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BuscarButton;
+        protected global::System.Web.UI.WebControls.TextBox UnidadTextBox;
         
         /// <summary>
-        /// UsuarioReportViewer control.
+        /// CantidadTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.Reporting.WebForms.ReportViewer UsuarioReportViewer;
+        protected global::System.Web.UI.WebControls.TextBox CantidadTextBox;
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// PrecioTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
-        /// Repeater1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
-        
-        /// <summary>
-        /// ImprimirButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ImprimirButton;
+        protected global::System.Web.UI.WebControls.TextBox PrecioTextBox;
     }
 }

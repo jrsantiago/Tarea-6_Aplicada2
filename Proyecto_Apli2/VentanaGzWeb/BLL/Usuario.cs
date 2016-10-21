@@ -13,8 +13,8 @@ namespace BLL
         public string Contrasena { get; set; }
         public string UserName { get; set; }
         public string  Nombre { get; set; }
-        public int Restriccion { get; set; } //Esta pasando datos solamente true
-        //Falta ponerle la Imagen en la bace de Datos...
+        public int Restriccion { get; set; }
+        public string Imagenes  { get; set; }
         public List<Usuario>listar { get; set; }
 
         public Usuario()
@@ -24,6 +24,7 @@ namespace BLL
             this.UserName = "";
             this.Restriccion = 0;
             this.listar = new List<Usuario>();
+            this.Imagenes = "";
         }
 
         public override bool Insertar()
@@ -32,7 +33,7 @@ namespace BLL
             bool retornar = false;
             try
             {
-                retornar = cone.Ejecutar(String.Format("Insert into Usuario(Contrasena,UserName,Restriccion,Nombre) Values('{0}','{1}', {2},'{3}')", this.Contrasena, this.UserName, this.Restriccion, this.Nombre));
+                retornar = cone.Ejecutar(String.Format("Insert into Usuario(Contrasena,UserName,Restriccion,Nombre,Imagenes) Values('{0}','{1}', {2},'{3}','{4}')", this.Contrasena, this.UserName, this.Restriccion, this.Nombre,this.Imagenes));
 
             }catch(Exception ex)
             {
@@ -103,5 +104,7 @@ namespace BLL
                 OrdenFinal = "Orden by " + Orden;
             return cone.ObtenerDatos("Select " + Campos + " From Usuario where " + Condicion +" --");
         }
+ 
+     
     }
 }

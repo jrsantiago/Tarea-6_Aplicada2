@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="InicioGz.master.cs" Inherits="VentanaGzWeb.InicioGz" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>VentanaGz</title>
+  
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+     <link rel="stylesheet" href="css/bootstrap.min.css" >
+
+    <style type="text/css">
+        .auto-style8 {
+            width: 1264px;
+            height: 589px;
+        }
+        .auto-style9 {
+            width: 800px;
+            height: 54px;
+        }
+        .auto-style10 {
+            width: 924px;
+            height: 504px;
+        }
+        .auto-style11 {
+            color: #FF0000;
+            width: 586px;
+            height: 30px;
+        }
+        .auto-style12 {
+            color: #000066;
+        }
+        .auto-style13 {
+            width: 106px;
+        }
+        .auto-style14 {
+            height: 36px;
+        }
+    </style>
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+   <table style="font-family:Forte" class="auto-style8">
+       <tr>
+           <td colspan="2" style="background-color:#93beed;text-align:center" class="auto-style9">
+               <h1 class="auto-style11">
+                   <span class="auto-style12">VentanaGz</span>
+               </h1>
+
+           </td>
+       </tr>
+
+       <tr>
+            <td style="background-color:#e1c8c8; class="auto-style13" class="auto-style13" ></td>
+            <td style="background-color:#e8e5e5; " class="auto-style10">
+               
+          
+                     
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
+                             <h2 class="auto-style14"> CONTENIDO DE CADA UNA DE LAS</h2>
+                             
+
+                         </asp:ContentPlaceHolder>
+                  
+            
+                         
+
+           </td>
+       </tr>
+       <tr>
+           <td colspan="2" style="height:80px;background-color:#93beed;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Informacion web</b>
+
+           </td>
+       </tr>
+
+
+   </table>
+
+    </form>
+</body>
+</html>
